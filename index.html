@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUPAGE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        main {
+            height: 100vh;
+             background: url('../project-1-edupage/img/bg.jpg')center/cover;
+            color: line;
+        }
+        .container {width: 60vw;margin: 0 auto;}
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 3px;
+        }
+        .nav ul {
+            display: flex;
+            gap: 35px;
+            font: 600 14px / 80px "Rubik", sans-serif;
+            color: #002347;
+        }
+        .nav ul li {color: #002347;}
+        .nav ul li:hover {
+            color: #ffc107;
+            cursor: pointer;
+        }
+        .nav ul li a {color: #002347;text-decoration: none;}
+        .nav ul li a:hover {color: #ffc107;}
+        .nav ul .wow {padding-left: 30px;}
+        .main-content{
+            padding:7%;
+            text-align:center;
+            color:#002347
+        }
+        .main-content h1{
+            font-size: 60px;
+            padding:5px 0;
+            font: 600 46px/ 80px "Rubik", sans-serif;
+            text-transform: uppercase;
+
+        }
+        .main-content h2{
+            text-transform: uppercase;
+            font: 600 18px/ 80px "Rubik", sans-serif;
+        }
+        .btn-1{
+             border:none;
+             color:#ffc107;
+             background-color: #002347;
+             padding:20px 50px;
+             border-radius:7px;
+        }
+        .btn-2{
+            border:none;
+            color:#002347;
+            background-color: #ffc107; 
+            padding:20px 50px;
+            border-radius:7px;
+        }
+        #section-2 .container .heading{text-align: center;}
+
+        .heading h2{font: 600 40px/ 80px "Rubik", sans-serif; color:#002347;}
+
+        .heading{padding:100px 0;text-align: center;}
+        .heading p{
+            font-style: italic ;
+            font-family: 'arial';
+            color:grey;
+        }
+
+        .sec-2-part-2 h2{font-size: 20px; font-weight: 500; font: 600 20px/ 80px "Rubik", sans-serif;}
+        .sec-2-part-2 i,  .sec-2-part-2 h2{color:#002347;}
+        .sec-2-part-2 p{color:grey;font: 500 16px "Rubik", sans-serif;}
+        .sec-2-part-2{
+            display:flex;
+            gap:15px;
+        }
+        .sec-2-part-2 i{font-size:40px;}
+        .card{
+            background-color: #f9f9ff;
+            padding:20px 30px;
+            align-items: center;
+            transition: 0.4s;
+        }
+        .card:hover{box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+
+        .card-2{
+            max-height: 700px;
+            max-width: 350px;
+            background-color:#f9f9ff;
+            font-family:'arial';
+            transition: 0.4s;   
+            overflow: hidden;
+        }
+        
+        .card-2:hover{box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+        .card-2:hover .pic{transform: scale(1.1);}
+        .card-2 h3{color:#002347;}
+        .card-2:hover h3{color:#ffc107;transition: 0.4s;}
+
+        .card-2 .pic{width:100%;transition: transform 0.5s ease;}
+        .card-2 h2{
+            font: 600 40px/ 10px "Rubik", sans-serif;
+            background-color: #002347;
+            display: inline;
+            color:white;
+            font-size: 16px;
+            padding:8px;
+        }
+        .card-2-top{overflow: hidden;}
+        .card-2-bottom{padding:20px;}
+        .card-2 p{ color:grey;}
+        .card-2 p, h3{padding-top: 20px;}
+        .sec-3-part-2{
+            display: flex;
+            justify-content: space-between;
+        }
+        .card-2-bottom-footer{
+            padding: 30px 0;
+            font-size:20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-2-bottom-footer img{ width:40px; }
+        .card-2-bottom-footer h1{
+            font-size: 18px;   
+        }
+        #section-4{
+            width:100%;
+            height:80vh;
+            background-color: #002347;
+            font-family:'arial';
+        }
+        .register-form{
+            display: flex;
+            justify-content: space-between;
+        }
+        #section-4 h1,p{
+            color:white;
+        }
+        .form-left{
+            display: flex;
+            flex-direction: column;
+            height:80vh;
+            justify-content: center;
+            gap:60px;  
+            flex-basis:60%;
+        }
+       .boxes{
+        display: flex;
+        gap: 10px;
+
+       }
+       .box{
+           display:flex;
+           align-items: center;
+           gap:6px;
+           width:25%;
+           color:white;
+           opacity:0.5;
+           border:1px solid white;
+           padding: 50px 40px;
+           justify-content:center;
+           border-radius: 10px;
+           background: rgb(204, 202, 202);
+       }
+       .form-right{
+        height:80vh;
+        display: flex;
+        align-items: center;
+       }
+       .form-card{
+        display:flex;
+        flex-direction: column;
+        max-width:350px;
+        max-height:600px;
+        background-color: white;
+        padding:50px;
+       }
+       .sbmt-btn{
+        padding:15px 0;
+        background-color: #ffc107;
+        border:none;
+        color:#002347;
+        font-size: 13px;
+        font-weight: 800;
+       }
+       .form-inputs{
+        font-weight: 600;
+        width:100%;
+        opacity:0.6;
+        border:none;
+        padding:14px;
+        border-bottom: 1px solid grey; 
+        outline: none; 
+        }
+       form{
+        padding:30px 0;
+       }
+       .card-3{
+        max-height: 500px;
+        max-width:270px;
+        background-color: white;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transition: 0.3s;
+        display:flex;
+        flex-direction: column;
+       }
+       .card-3:hover{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+       }
+        .card-3 h1{
+            font-size: 20px;
+        }
+        .card-3 img{
+            width:100%;
+        }
+        .card-3-top{
+            flex-basis:30%;
+        }
+        .card-3-bottom{
+            padding:20px;
+            font-family: 'arial';
+            text-align: center;
+        }
+        .card-3-bottom p{
+            color:grey;
+            padding-top:20px;
+        }
+
+        .card-3-bottom-footer{
+            opacity:0.4;
+            padding-top:30px;
+            display:flex;
+            gap:20px;
+            justify-content: center;
+
+        }
+        .sec-5-part-2{
+            display:flex;
+            justify-content: space-between;
+
+        }
+        #section-5{
+            margin-bottom:60px;
+        }
+        #section-6{
+            background-color: #002347;
+            height:100vh;
+        }
+        .card-4{
+            max-width: 600px;
+            max-height: 700px;
+            transition: 0.4s;
+            overflow: hidden;
+        }
+        .card-4:hover img{
+            transform: scale(1.1);
+            
+        }
+        .sec-6-part-2{
+            display: flex;
+            justify-content: space-between;
+        }
+        .sec-6-part-2 img{
+            width:100%; height:100%; object-fit: cover;transition: transform 0.5s ease;
+        }
+        .sec-6-part-3{
+            display:flex;
+            justify-content: center;
+            gap: 20px;
+            font-family:'arial';
+            margin-top:90px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .sec-6-part-3 a,i{
+            color:#ffc107;
+            text-decoration: none;
+        }
+        .card-5{
+            max-width:550px;
+            max-height: 400px;
+            display:flex;
+            align-items:center;
+            gap:20px;
+            padding:40px 60px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            transition: 0.4s;
+        }
+        .card-5:hover{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        }
+        #section-7{
+            display:flex;
+            font-family: 'arial';
+            padding-bottom:200px;
+        }
+        #section-7 p{
+               color:grey;
+        }
+        .section-7-part-2{
+            display: flex;
+            justify-content: space-between  ;
+        }
+        .footer{
+            font-family: 'arial';
+            height:70vh;
+            background-color: #002347;
+        }
+        .row{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            padding:15px;
+        }
+        .row h3{
+            color:white;
+            padding-bottom:30px; 
+        }
+        .row h4{
+            color:grey;
+            font-weight: 200;
+            font-size:16px;
+        }
+        .rows{
+            display:flex;   
+            padding-top:150px;
+            justify-content: space-between;
+        }
+        .rows-left{
+            display: flex;
+            gap:20px;
+        }
+        .footer-last{
+            padding:60px 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .icons i{
+            padding:10px;
+            background: white;
+        }
+        .row button{
+            background-color: #ffc107;
+            border:none;
+            color:#002347;
+            padding:10px;
+            font-size:12px;
+        }
+        .row input{
+            height: 20px;
+            padding:16px; 
+            font-size:16px;
+            background-color: #8fa2b4;  
+            opacity: 0.8;
+            border:none;
+        }
+        .search{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <header class="header">
+                <img src="../project-1-edupage/img/logo.png" alt="logo">
+                <div class="nav">
+                    <ul>
+                        <li style="color:#ffc107;">HOME</li>
+                        <li>ABOUT</li>
+                        <li>PAGES</li>
+                        <li>BLOG</li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li class="wow"><i class="fa-solid fa-magnifying-glass"></i></li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+        <div class="main-content">
+            <h2>Best online education service In the world</h2>
+            <h1>One Step Ahead This Season</h1>
+            <div style="padding-top:20px; display:flex; justify-content:center; gap:20px;">
+                <button class="btn-1">LEARN MORE</button>
+                <button class="btn-2">SEE COURSE</button>
+            </div>
+        </div>
+    </main>
+    <div id="section-2">
+        <div class="container">
+               <div class="heading">
+                 <h2>Awesome Feature</h2>
+                 <p>Replenish man have thing gathering lights yielding shall you</p>
+               </div>
+               
+                <div class="sec-2-part-2">
+                    <div class="card">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h2>Scholarship Facility</h2>
+                        <p>One make creepeth, man bearing theira firmament won't great heaven</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-book-open"></i>
+                        <h2>Sell Online Course</h2>
+                        <p>One make creepeth, man bearing theira firmament won't great heaven</p>
+                    </div>
+                    <div class="card">
+                        <i class="fa-solid fa-globe"></i>
+                        <h2>Global Certification</h2>
+                        <p>One make creepeth, man bearing theira firmament won't great heaven</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div id="section-3">
+        <div class="container">
+            <div class="heading">
+                <h2>Our Popular Courses</h2>
+                <p>Replenish man have thing gathering lights yielding shall you</p>
+            </div>
+            <div class="sec-3-part-2">
+                <div class="card-2">
+                    <div class="card-2-top"><img class="pic" src="../project-1-edupage/img/c1.jpg.webp" style="width:100%;"/></div>
+                    <div class="card-2-bottom">
+                        <h2>DESIGN</h2>
+                        <h3>Custom Product Design</h3>
+                        <p>One make creepeth, man bearing theira firmament won't great heaven </p>
+                        <div class="card-2-bottom-footer">
+                            <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
+                                <img src="../project-1-edupage/img/author1.png.webp">
+                                <h1>Cameron</h1>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; gap:20px;">
+                                <div style="display:flex; justify-content:space-between;gap:10px;"><i class="fa-regular fa-user"></i>
+                                    <h1>35</h1> 
+                                </div>  
+                                <div style="display:flex; justify-content:space-between; gap:10px;"> <i class="fa-regular fa-heart"></i>
+                                      <h1>25</h1>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-2">
+                    <div  class="card-2-top"><img class="pic" src="../project-1-edupage/img/c2.jpg.webp" style="width:100%;"/></div>
+                    <div class="card-2-bottom">
+                        <h2>DESIGN</h2>
+                        <h3>Custom Product Design</h3>
+                        <p>One make creepeth, man bearing theira firmament won't great heaven </p>
+                        <div class="card-2-bottom-footer">
+                            <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
+                                <img src="../project-1-edupage/img/author2.png.webp">
+                                <h1>Cameron</h1>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; gap:20px;">
+                                <div style="display:flex; justify-content:space-between;gap:10px;"><i class="fa-regular fa-user"></i>
+                                    <h1>35</h1> 
+                                </div>  
+                                <div style="display:flex; justify-content:space-between; gap:10px;"> <i class="fa-regular fa-heart"></i>
+                                      <h1>25</h1>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-2">
+                    <div  class="card-2-top"><img  class="pic" src="../project-1-edupage/img/c3.jpg.webp" style="width:100%;"/></div>
+                    <div class="card-2-bottom">
+                        <h2>DESIGN</h2>
+                        <h3>Custom Product Design</h3>
+                        <p>One make creepeth, man bearing theira firmament won't great heaven </p>
+                        <div class="card-2-bottom-footer">
+                            <div style="display:flex; justify-content:space-between; align-items:center; gap:10px;">
+                                <img src="../project-1-edupage/img/author3.png.webp">
+                                <h1>Cameron</h1>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; gap:20px;">
+                                <div style="display:flex; justify-content:space-between;gap:10px;"><i class="fa-regular fa-user"></i>
+                                    <h1>35</h1> 
+                                </div>  
+                                <div style="display:flex; justify-content:space-between; gap:10px;"> <i class="fa-regular fa-heart"></i>
+                                      <h1>25</h1>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div id="section-4">
+          <div class="container">
+              <div class="register-form">
+                <div class="form-left">
+                    <div style="display:flex; flex-direction:column; padding:10px 20px;justify-content:space-between; gap:40px; ">
+                        <h1 style="font-size:50px;">Register Now</h1>
+                     <p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
+                    </div>
+                     
+                     <div class="boxes">
+                        <div class="box">
+                            <h2>150</h2>
+                            <p>Days</p>
+                        </div>
+                        <div class="box">
+                            <h2>23</h2>
+                            <p>Hours</p>
+                        </div>
+                        <div class="box">
+                            <h2>47</h2>
+                            <p>Mins</p>
+                        </div>
+                        <div class="box">
+                            <h2>59</h2>
+                            <p>Secs</p>
+                        </div>             
+                     </div>
+                </div>
+                <div class="form-right">
+                     <div class="form-card">
+                        <h1 style="color:#002347; text-align:center; font-size:24px;">Courses for Free</h1>
+                        <p style="color:grey;  padding-top:5px;text-align:center;">It is high time for learning</p>
+                        <form method="POST">
+                            <input  class="form-inputs"type="text" placeholder="Your Name"/>
+                            <input class="form-inputs" type="text" placeholder="Your Phone Number"/>
+                            <input class="form-inputs" type="email" placeholder="Your Email Adress"/>
+                        </form>
+                        <input class="sbmt-btn" type="submit" value="SUBMIT">
+                     </div>
+                </div>
+              </div>
+          </div>
+    </div>
+    <div id="section-5">
+        <div class="container">
+                <div class="heading">
+                    <h2>Our Expert Trainers</h2>
+                    <p>Replenish man have thing gathering lights yielding shall you</p>
+                </div>
+            <div class="sec-5-part-2">
+                <div class="card-3">
+                    <div class="card-3-top"><img src="../project-1-edupage/img/t1.jpg.webp"/></div>
+                    
+                    <div class="card-3-bottom">
+                        <h1>Nathan Macken</h1>
+                        <p>Sr. web designer</p>
+                        <p>If you're looking at blank cassettes on the web, you may be very 
+                            confused at the.</p>
+                        <div class="card-3-bottom-footer">
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-pinterest"></i>
+
+                        </div>
+                    </div>
+                </div><div class="card-3">
+                    <div class="card-3-top"><img src="../project-1-edupage/img/t2.jpg.webp"/></div>
+                    
+                    <div class="card-3-bottom">
+                        <h1>Nathan Macken</h1>
+                        <p>Sr. web designer</p>
+                        <p>If you're looking at blank cassettes on the web, you may be very 
+                            confused at the.</p>
+                        <div class="card-3-bottom-footer">
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-pinterest"></i>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card-3">
+                    <div class="card-3-top"><img src="../project-1-edupage/img/t3.jpg.webp"/></div>
+                    
+                    <div class="card-3-bottom">
+                        <h1>Nathan Macken</h1>
+                        <p>Sr. web designer</p>
+                        <p>If you're looking at blank cassettes on the web, you may be very 
+                            confused at the.</p>
+                        <div class="card-3-bottom-footer">
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-pinterest"></i>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card-3">
+                    <div class="card-3-top"><img src="../project-1-edupage/img/t4.jpg.webp"/></div>
+                    
+                    <div class="card-3-bottom">
+                        <h1>Nathan Macken</h1>
+                        <p>Sr. web designer</p>
+                        <p>If you're looking at blank cassettes on the web, you may be very 
+                            confused at the.</p>
+                        <div class="card-3-bottom-footer">
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-pinterest"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section-6">
+        <div class="container">
+        <div class="heading">
+            <h2 style="color:white;">Upcoming Events</h2>
+            <p>Replenish man have thing gathering lights yielding shall you</p>
+        </div>
+        <div class="sec-6-part-2">
+            <div class="card-4">
+                <img src="../project-1-edupage/img/e1.jpg.webp"/>
+            </div>
+            <div class="card-4">
+                <img src="../project-1-edupage/img/e2.jpg.webp"/>
+            </div>
+        </div>
+        <div class="sec-6-part-3">
+            <p style="font-size:12px !important; "><a href="event.html">VIEW ALL EVENT</a></p>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div> 
+        
+    </div>
+    </div>
+    <div id="section-7">
+        <div class="container">
+            <div class="heading">
+                <h2>Client say about me</h2>
+                <p>Replenish man have thing gathering lights yielding shall you</p>
+            </div>
+            <div class="section-7-part-2">
+                <div class="card-5">
+                    <div><img src="../project-1-edupage/img/t2.jpg (1).webp"/></div>
+                    <div style="display:flex; flex-direction:column;gap:15px;">
+                        <h2>Davil Saden</h2>
+                        <p>
+                            Him, made can't called over won't there on divide there
+                            male fish beast own his day third seed sixth seas unto.
+                            Saw from
+                          </p>
+                    </div>
+                </div>  
+                <div class="card-5">
+                    <div><img src="../project-1-edupage/img/t2.jpg (1).webp"/></div>
+                    <div style="display:flex; flex-direction:column;gap:15px;">
+                        <h2>Davil Saden</h2>
+                        <p>
+                            Him, made can't called over won't there on divide there
+                            male fish beast own his day third seed sixth seas unto.
+                            Saw from
+                          </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="rows">
+                <div class="rows-left">
+                <div class="row">
+                    <h3>Top Products</h3>
+                    <h4>Managed Website</h4>
+                    <h4>Manage Reputation</h4>
+                    <h4>Power Tools</h4>
+                    <h4>Marketing Service</h4>
+                </div>
+                <div class="row">
+                    <h3>Quick Links</h3>
+                    <h4>Jobs</h4>
+                    <h4>Brand Assets</h4>
+                    <h4>Investor Relations</h4>
+                    <h4>Terms of Service</h4>
+                </div>
+                <div class="row">
+                    <h3>Features</h3>
+                    <h4>Jobs</h4>
+                    <h4>Brand Assets</h4>
+                    <h4>Investor Relations</h4>
+                    <h4>Terms of Service</h4>
+                </div>
+                <div class="row">
+                    <h3>Resources</h3>
+                    <h4>Guides
+                     <h4>Research</h4>   
+                       <h4> Experts</h4>
+                       <h4> Agencies</h4>
+                </div>
+            </div>
+                <div class="row">
+                    <h3>Newsletter</h3>
+                    <h4>You can trust us. We only send promo offers.</h4>
+                    <div class="search"><input type="text" placeholder="Your Email Address">
+                    <button>SUBSCRIBE</button></div>
+                </div>
+            </div>
+            <div class="footer-last">
+                <p>Copyright ©2024 All rights reserved | This template is made with  by <span style="color:#ffc107; cursor:pointer;">Colorlib</span></p>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-basketball"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
